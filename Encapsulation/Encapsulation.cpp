@@ -6,6 +6,8 @@
 #include "include/World.h" 
 #include <iostream>
 
+#include "include/Integer.h"
+
 int main()
 { 
 	World w;

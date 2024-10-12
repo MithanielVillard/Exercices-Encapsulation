@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 class Integer
 {
 public:
@@ -12,7 +13,10 @@ public:
 	Integer operator*(const Integer r);
 	Integer operator/(const Integer r);
 	Integer operator%(const Integer r);
-	Integer operator<<(const Integer r);
+
+	friend std::ostream& operator<<(std::ostream& os, const Integer& i);
+	std::ostream& operator<<(std::ostream& os);
+
 	void operator+=(const Integer r);
 	void operator-=(const Integer r);
 	void operator*=(const Integer r);
